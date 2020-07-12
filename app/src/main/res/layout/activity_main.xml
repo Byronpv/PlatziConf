@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="activity_main">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/toolbar_alto"
+                android:layout_marginLeft="@dimen/margen_home_titulo"
+                android:layout_marginTop="@dimen/margen_home_titulo"
+                android:layout_marginRight="@dimen/margen_home_titulo"
+                android:layout_marginBottom="@dimen/margen_home_titulo"
+                android:contentDescription="@string/lorem_speaker_detail"
+                android:src="@drawable/logo_platzi_conf">
+
+            </ImageView>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <fragment
+            android:id="@+id/FragmentContent"
+            android:layout_width="match_parent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnMenu"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph">
+        </fragment>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            app:menu="@menu/bnv_menu">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
