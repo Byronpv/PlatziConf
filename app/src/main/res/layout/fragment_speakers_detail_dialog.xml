@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <Toolbar
-            android:id="@+id/toobar"
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -41,7 +41,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@drawable/shape_parrafo">
+                    android:background="#FFF"
+                    >
 
                     <ImageView
                         android:id="@+id/ivDetailSpeakerImage"
@@ -63,7 +64,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvDetailSpeakerJobtitule"
+                        android:id="@+id/tvDetailSpeakerJobtitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -100,7 +101,8 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
                         android:text="@string/lorem_speaker_detail"
-                        android:textSize="@dimen/tamaño_titutlo" />
+                        android:textSize="@dimen/tamaño_titutlo"
+                        android:textColor="@color/colorPrimaryDark"/>
 
 
                 </LinearLayout>

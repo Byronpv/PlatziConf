@@ -4,7 +4,7 @@
     <dimen name="alto_logoplatzi">45dp</dimen>
     <dimen name="toolbar_alto">30dp</dimen>
     <dimen name="corner_radius">4dp</dimen>
-    <dimen name="image_view_home">150dp</dimen>
+    <dimen name="image_view_home">100dp</dimen>
     <dimen name="tamaño_titutlo">20sp</dimen>
     <dimen name="margen_home_titulo">10dp</dimen>
     <dimen name="tamaño_subtitutlo">15sp</dimen>

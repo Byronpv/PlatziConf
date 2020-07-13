@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <androidx.appcompat.widget.Toolbar
+        <Toolbar
             android:id="@+id/toolbarMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -26,7 +26,7 @@
                 android:src="@drawable/logo_platzi_conf">
 
             </ImageView>
-        </androidx.appcompat.widget.Toolbar>
+        </Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

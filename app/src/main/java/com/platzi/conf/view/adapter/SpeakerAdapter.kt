@@ -10,10 +10,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.platzi.conf.R
 import com.platzi.conf.model.Speaker
+import com.platzi.conf.view.ui.fragments.SpeakersFragment
 
-class SpeakerAdapter(val speakerListener: SpeakerListener) : RecyclerView.Adapter<SpeakerAdapter.ViewHolderSpeaker>() {
+class SpeakerAdapter(private val speakerListener: SpeakersFragment) : RecyclerView.Adapter<SpeakerAdapter.ViewHolderSpeaker>() {
 
-    val listSpeaker = ArrayList<Speaker> ()
+    private val listSpeaker = ArrayList<Speaker> ()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolderSpeaker(LayoutInflater.from(parent.context).inflate((R.layout.item_speaker),parent, false))
 

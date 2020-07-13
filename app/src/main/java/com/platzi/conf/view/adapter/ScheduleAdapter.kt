@@ -32,8 +32,8 @@ class ScheduleAdapter (val scheduleListener: ScheduleListener) : RecyclerView.Ad
         cal.time = conference.datetime
 
         val hourFormat = simpleDateFormat.format(conference.datetime)
-
-        holder.tvItemScheduleHour.text = simpleDateFormatAMPM.format(conference.datetime).toUpperCase()
+        holder.tvItemScheduleHour.text = hourFormat
+        holder.tvItemScheduleAmPm.text = simpleDateFormatAMPM.format(conference.datetime).toUpperCase()
 
         holder.itemView.setOnClickListener {
             scheduleListener.onConferenceClick(conference, position)

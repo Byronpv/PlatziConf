@@ -1,36 +1,35 @@
 package com.platzi.conf.viewmodel
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.platzi.conf.model.Speaker
 import com.platzi.conf.network.Callback
 import com.platzi.conf.network.FirestoreServices
-import java.lang.Exception
 
-class SpeakerViewModel {
-
-    val firestoreServices = FirestoreServices ();
-    var listSchedule: MutableLiveData<List<Speaker>> = MutableLiveData()
+class SpeakersViewModel : ViewModel() {
+    val firestoreService = FirestoreServices()
+    var listSpeakers: MutableLiveData<List<Speaker>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
+
     fun refresh() {
-        getSpeakerFromFirebase()
+        getSpeakersFromFirebase()
     }
 
-    private fun getSpeakerFromFirebase() {
-        firestoreServices.getSpeakers(object : Callback<List<Speaker>> {
-            override fun OnSucess(result: List<Speaker>?) {
-                listSchedule.postValue(result)
+    fun getSpeakersFromFirebase() {
+        firestoreService.getSpeakers(object : Callback<List<Speaker>> {
+            override fun onSuccess(result: List<Speaker>?) {
+                listSpeakers.postValue(result)
                 processFinished()
             }
-            override fun onFailed(exception: Exception) {
-                super.onFailed(exception)
-                processFinished()
 
+            override fun onFailed(exception: Exception) {
+                processFinished()
             }
         })
     }
-    fun processFinished() {
-        isLoading.value=true
-    }
 
+    private fun processFinished() {
+        isLoading.value = true
+    }
 }

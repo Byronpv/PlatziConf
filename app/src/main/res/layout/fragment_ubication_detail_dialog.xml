@@ -7,13 +7,21 @@
     tools:context=".view.ui.fragments.ScheduleDetailDialogFragment">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toolbarUbication"
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/toolbarUbication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -22,8 +30,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/shape_parrafo">
+                android:background="@drawable/shape_parrafo"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -48,11 +56,11 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@drawable/shape_parrafo">
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvDetailConferenceHour"
+                            android:id="@+id/tvUbicationPlaceName"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="5dp"
@@ -62,38 +70,45 @@
                             android:textSize="30sp"
                             android:textStyle="bold" />
 
-
-                        <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="20dp">
-
-
-
-                        <ImageView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:src="@drawable/ic_place_black_24dp" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:gravity="left"
-                            android:text="Dirección del lugar"
-                            android:textSize="15sp" />
-
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
                             android:background="@color/colorPrimary"/>
 
-                    </LinearLayout>
 
                         <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="20dp">
+
+
+                            <ImageView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:src="@drawable/ic_place_black_24dp" />
+
+                            <TextView
+                                android:id="@+id/tvUbicationDirection"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:gravity="left"
+                                android:text="Dirección del lugar"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="15sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorPrimary" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPhonePlace"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -107,21 +122,24 @@
                                 android:src="@drawable/ic_call_black_24dp" />
 
                             <TextView
+                                android:id="@+id/tvUbicationPhoneNumber"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:gravity="left"
                                 android:text="Teléfono"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="15sp" />
 
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:background="@color/colorPrimary"/>
+                                android:background="@color/colorPrimary" />
 
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/llWebsite"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
@@ -135,17 +153,19 @@
                                 android:src="@drawable/ic_link_black_24dp" />
 
                             <TextView
+                                android:id="@+id/tvUbicationWebsite"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="5dp"
                                 android:gravity="left"
                                 android:text="Página Web"
+                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="15sp" />
 
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:background="@color/colorPrimary"/>
+                                android:background="@color/colorPrimary" />
 
                         </LinearLayout>
 
