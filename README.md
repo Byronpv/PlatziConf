@@ -9,7 +9,6 @@ A conference aplication was developed for practical purposes, loading the data o
 
 and basic components of UI *Material Design*. Google Maps Api was used, implementing markers and modifying the style of it. The MVVM design pattern was used   
 
-
 ![]()
 <p align="center">
 <img src="https://github.com/Byronpv/PlatziConf/blob/master/imagenes/Screenshot_1594685244.png" widht="500" height="500">
