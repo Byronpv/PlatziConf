@@ -49,14 +49,6 @@ S
 #app/src/main/res/anim/animation.xml,4\6\4685d00cf2541007cad039538195aaaa555d2bb8
 b
 2app/src/main/res/drawable/ic_baseline_close_24.xml,5\b\5b14537d1fdb1402316ac58f3544f15fc5a2484c
-Y
-)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6
-a
-1app/src/main/res/layout/activity_splashscreen.xml,8\a\8a881bc34287923a75515116232fd3d753e9dc33
-]
--app/src/main/res/layout/fragment_schedule.xml,1\3\13fc457fe607ea72f4cfdeb32962ff4aa90a2c3e
-]
--app/src/main/res/layout/fragment_speakers.xml,2\e\2e992d9776afda0c16140676dc9d0bdfa79bbe22
 R
 "app/src/main/res/values/colors.xml,9\6\969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
 R
