@@ -1,6 +1,6 @@
 # PlatziConf
 
-A conference aplication *Demo* was developed, loading the data of the exhibitors and schedule from the *Firebase*, using basic components of Android  
+A conference aplication was developed for practical purposes, loading the data of the exhibitors and schedule from the *Firebase*, using basic components of Android  
 - Fragments
 - DialogFragments
 - RecyclerView
